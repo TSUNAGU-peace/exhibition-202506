@@ -17,6 +17,9 @@ header{
     background: #333;
     color: white;
     padding: 20px 0;
+    max-height: 60px;
+  width: auto;
+  margin-top: 10px;
 }
 
 header img {
