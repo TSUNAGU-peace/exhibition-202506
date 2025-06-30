@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>#私たちの平和展｜ギャラリー</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #fefcf8;
+    }
+
+    .gallery-title {
+      text-align: center;
+      padding: 20px;
+      font-size: 1.6rem;
+      color: #333;
+    }
+
+    .swiper {
+      width: 90%;
+      max-width: 800px;
+      height: auto;
+      margin: auto;
+      padding-bottom: 50px;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .frame {
+      position: relative;
+      width: 100%;
+      max-width: 350px;
+      aspect-ratio: 3/4;
+      background-image: url('https://example.com/gold-frame.png'); /* 金の額縁画像URLに差し替えてください */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .frame a img {
+      position: absolute;
+      top: 12%;
+      left: 12%;
+      width: 76%;
+      height: 76%;
+      object-fit: cover;
+      border: none;
+      border-radius: 4px;
+    }
+
+    /* スマホ対応 */
+    @media screen and (max-width: 600px) {
+      .frame {
+        max-width: 280px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="gallery-title">#私たちの平和展 オンラインギャラリー</div>
+
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <!-- スライド1 -->
+      <div class="swiper-slide">
+        <div class="frame">
+          <a href="https://note.com/yourlink1" target="_blank">
+            <img src="https://example.com/thumb1.jpg" alt="記事1" />
+          </a>
+        </div>
+      </div>
+      <!-- スライド2 -->
+      <div class="swiper-slide">
+        <div class="frame">
+          <a href="https://note.com/yourlink2" target="_blank">
+            <img src="https://example.com/thumb2.jpg" alt="記事2" />
+          </a>
+        </div>
+      </div>
+      <!-- 必要に応じてスライドを追加 -->
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      centeredSlides: true,
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+      breakpoints: {
+        768: {
+          slidesPerView: 2.5,
+        }
+      }
+    });
+  </script>
+</body>
+</html>
