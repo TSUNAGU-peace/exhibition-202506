@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: #fefcf8;
+}
+
+.gallery-title {
+  text-align: center;
+  padding: 24px 12px;
+  font-size: 1.7rem;
+  color: #333;
+}
+
+.swiper {
+  width: 95%;
+  max-width: 900px;
+  margin: 0 auto 48px auto;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  border: 8px solid gold;      /* 金色の額縁 */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+  transition: transform .3s;
+}
+
+.swiper-slide img:hover {
+  transform: scale(1.03);
+}
+
+/* ページネーション（ドット）の色調整 */
+.swiper-pagination-bullet {
+  background: #999;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background: #ffbf00;
+}
