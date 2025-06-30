@@ -1,20 +1,22 @@
 body {
   margin: 0;
-  font-family: "Arial", sans-serif;
-  background: #fefcf8;
+  font-family: "Helvetica Neue", sans-serif;
+  background: linear-gradient(to bottom, #fefcf8, #f3f3f3);
+  color: #333;
 }
 
 .gallery-title {
   text-align: center;
-  padding: 24px 12px;
-  font-size: 1.7rem;
-  color: #333;
+  padding: 32px 16px 12px;
+  font-size: 2rem;
+  color: #222;
+  font-weight: bold;
 }
 
 .swiper {
-  width: 95%;
-  max-width: 900px;
-  margin: 0 auto 48px auto;
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto 64px auto;
 }
 
 .swiper-slide {
@@ -25,22 +27,31 @@ body {
 
 .swiper-slide img {
   width: 100%;
+  max-width: 260px;
   height: auto;
-  border: 8px solid gold;      /* 金色の額縁 */
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
-  transition: transform .3s;
+  border: 8px solid gold;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .swiper-slide img:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* ページネーション（ドット）の色調整 */
+/* ページネーションのカスタム */
 .swiper-pagination-bullet {
-  background: #999;
-  opacity: 1;
+  background: #aaa;
+  opacity: 0.7;
 }
 .swiper-pagination-bullet-active {
-  background: #ffbf00;
+  background: #ffd700;
+}
+
+/* ナビ矢印のカスタム（色など） */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #007bff;
+  font-weight: bold;
 }
